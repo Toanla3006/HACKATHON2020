@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Về chúng tôi</title>
+		<link href="css/common.css" rel="stylesheet" />
+		<link href="css/reset.css" rel="stylesheet" />
+		<link href="css/aboutus.css" rel="stylesheet" />
+		<script src="js/lib/jquery.min.js"></script>
+		<style>
+			.nav-menu a{
+				margin-top: -0.4em;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="toolbar" style="background-color: #3a75a6;">
+			<div id="top_tool">
+			
+				<div id="nav">
+					<div class="nav-menu">
+						<a href="Homepage.html" target="_blank" id="html_index" style="color: white;">Trang chủ</a>
+						<a href="Selectgame.html" target="_blank" id="html_game" style="color: white;">Trò chơi</a>
+						<a href="aboutus.html" target="_blank" id="html_about"  class="current" style="color: white;">Về chúng tôi</a>
+					</div>
+					<div class="nav-current"></div>
+				</div>
+			</div>
+
+		</div>
+		<div class="container">
+			<div class="cont_top">
+				<h1 id="op" class="header">Về chúng tôi</h1>
+			</div>
+			<div class="cont_main" style="background-color: #3a75a6;">
+				<div class="main_contro">
+					<section class="contro_left"><img src="./aboutus/bg01.jpg" style="height: 320px;"/></section>
+					<section class="contro_right">
+						<p style="font-size: 27px;" id="box1_1">Sứ mệnh</p>
+						<p class="text_01" style="font-size: 14px;" id="box1_2">Chúng tôi hoàn toàn toàn tâm cung cấp công</p>
+						<p class="text_02" style="font-size: 14px;" id="box1_3">cụ đơn giản nhất và phương thức sáng tạo nhất</p>
+						<p class="text_02" style="font-size: 14px;" id="box1_4">để dạy lập trình cho trẻ em</p>
+						<p class="text_01" style="font-size: 14px;" id="box1_5">Đối với nhiệm vụ này</p>
+						<p class="text_02" style="font-size: 14px;" id="box1_6">chúng tôi rất cần sự giúp đỡ của bạn</p>
+						<p class="text_02" style="font-size: 14px;" id="box1_7">Nếu có thắc mắc hoặc vấn đề gì</p>
+						<p class="text_02" style="font-size: 14px;" id="box1_8">hãy liên hệ với chúng tôi</p>
+					</section>
+				</div>
+				<div class="main_members">
+					<section class="membox member_01">
+						<div class="multi-hover">
+							<div class="desc" class="memname1">Hiếu</div>
+							<img src="./aboutus/member01.jpg" style="width: 212.5px;"/>
+						</div>
+						<h2 class="memname1">Hồ Đắc Hiếu</h2>
+						<p class="passage" id="pa1_1">Phụ trách front-end</p>
+						
+					</section>
+					<section class="membox member_02">
+						<div class="multi-hover">
+							<div class="desc" class="memname2">Khoa</div>
+							<img src="./aboutus/member02.jpg" style="width: 212.5px;"/>
+						</div>
+						<h2 class="memname2">Phạm Nam Khoa</h2>
+						<p class="passage" id="pa2_1">Phụ trách back-end</p>
+						
+					</section>
+					<section class="membox member_03">
+						<div class="multi-hover">
+							<div class="desc" class="memname3">Thiện</div>
+							<img src="./aboutus/member03.jpg" style="width: 212.5px;"/>
+						</div>
+						<h2 class="memname3">Tôn Trí Thiện</h2>
+						<p class="passage" id="pa3_1">Phụ trách back-end</p>
+						
+					</section>
+					<section class="membox member_04">
+						<div class="multi-hover">
+							<div class="desc" class="memname4">Toàn</div>
+							<img src="./aboutus/member04.jpg" style="width: 212.5px;"/>
+					    </div>
+					    <h2 class="memname4">La Quốc Toàn</h2>
+						<p class="passage" id="pa4_1">Phụ trách front-end</p>
+						
+					</section>
+				</div>
+				<div class="main_mail">
+					<p id="contact">Góp ý</p>
+					<form id="form" action="#" method="POST">
+					    <input class="samecss" id="name" type="text"  placeholder="Họ và tên" 
+					    	onkeyup="if(/[^0-9a-zA-Z]/g.test(value))alert('Tên không nên chứa kí tự đặc biệt')" name="name">
+					    <input class="samecss" id="email" type="email"  placeholder="Email"   name="_replyto"> 
+					    <textarea id="message" placeholder="Ý kiến của bạn" name="messages"></textarea>
+					    <input id="submitbtn" type="button" value="Gửi" onclick="checkUser()">
+					</form> 
+
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+				Copyright © Team Newbies - Hackathon 2020
+		</div>
+		<script src="js/btn.js" async="true"></script>
+		<script src="js/page.js" async="true"></script>
+		<script src="js/aboutus.js" async="true"></script>
+		<script type="text/javascript">
+			 function checkEmail(){
+			 	var uemail = document.getElementById("email").value;
+			 	if (uemail != "") {
+
+	     				var reg = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/;
+
+	     				isok= reg.test(uemail );
+
+				       if (!isok) {
+			
+				            alert("Dịnh dạng email không chính xác, vui lòng nhập lại！");
+			
+				            document.getElementById("email").focus();
+				            document.getElementById("email").removeEventListener('blur', checkEmail)
+			
+				            return false;
+			
+				        }
+
+	   			 };
+			 }
+			  function checkName(){
+			 	var uname = document.getElementById("name").value;
+			 	if (uname == "") {
+			
+				            alert("Vui lòng điền tên của bạn, không được để trống！");
+			
+				            document.getElementById("name").focus();
+				            document.getElementById("name").removeEventListener('blur', checkEmail)
+				            return false;
+
+	   			 };
+			 }
+			 function checkUser(){
+			   var username = document.getElementById("name").value;
+			   var uemail = document.getElementById("email").value;
+			   var umessage = document.getElementById("message").value;
+			  
+			   if(username != "" && uemail != "" && umessage !=""){
+			   	   document.getElementById("form").submit();
+			   }else{
+			      alert("Vui lòng nhập chính xác thông tin！");
+			   }
+			    
+			}
+			 document.getElementById('email').addEventListener('focus', function(){
+			 	document.getElementById('email').addEventListener('blur',checkEmail);
+			 })
+			 
+
+		</script>
+	</body>
+</html>
